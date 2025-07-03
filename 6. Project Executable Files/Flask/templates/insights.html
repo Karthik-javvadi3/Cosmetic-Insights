@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insights</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <style>
+   
+
+ 
+
+    .insights-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+
+    .insights-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .insights-section p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+        margin-top: 1em;
+      }
+
+      .insights-section {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<!-- ✅ Bootstrap styles applied here -->
+<body class="text-black" style="background-color: #f0f0f0;">
+
+  <header>
+    <nav>
+      <h1>COSMETICS ANALYSIS</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/insights">Insights</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="insights-section text-center">
+    
+    <div style="
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #242222;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+">
+  <h2 style="color: #eaf0f1; margin-bottom: 1rem;">Cosmetics Industry Insights</h2>
+  <p>
+    The top cosmetics brands are <strong>Clinique</strong> and <strong>Shiseido</strong>, with <strong>moisturizers</strong> leading in sales.
+    Most products—especially from Clinique—are unsuitable for <em>sensitive</em>, <em>dry</em>, and <em>normal</em> skin types.
+    <strong>La Mer</strong> offers the highest-priced items across all categories.
+    Overall, top brands and product categories maintain <strong>high ratings</strong>, averaging around <strong>4 to 4.5 stars</strong>.
+  </p>
+</div>
+
+</section>
+
+  </main>
+
+  <footer class="text-center mt-5 text-white-50">
+    <p>Built with <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a> | &copy; 2025 Cosmetics Analysis</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

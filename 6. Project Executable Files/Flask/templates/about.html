@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Cosmetics Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<style>
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    background-color: #f8f9fa;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.content {
+    padding: 1rem 0;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.main-description {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #4fd1c7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.feature-icon svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.feature-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.feature-content p {
+    color: #718096;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <h1>COSMETICS ANALYSIS</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/story">Story</a></li>
+                <li><a href="/insights">Insights</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-container" style="background-color: #f0f0f0;">
+    <div class="image-section">
+        <img src="{{ url_for('static', filename='products.png') }}" alt="Cosmetic Products Collection" class="product-image">
+    </div>
+
+    <div class="content">
+        <h2 class="main-heading">Discover Your Perfect Skincare</h2>
+        <p class="main-description">Find the best products for your skin with our expert analysis and recommendations.</p>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+            <div class="feature-content">
+                <h3>Tailored for You</h3>
+                <p>Explore top skincare brands and products that match your unique skin type and needs.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+            <div class="feature-content">
+                <h3>Easy and Informative</h3>
+                <p>Get clear, straightforward advice without the jargon, making skincare simple and fun.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+            </div>
+            <div class="feature-content">
+                <h3>Trusted Recommendations</h3>
+                <p>Our team of skincare enthusiasts provides reliable insights to help you make the best choices.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+            </div>
+            <div class="feature-content">
+                <h3>Start Your Journey</h3>
+                <p>Dive into the world of skincare and find what works best for you with our comprehensive analysis tools.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
